@@ -19,5 +19,25 @@
             <li><a href="#">Contact</a></li>
         </lu>
     </header>
+    <section id="home-section" class="home-view">
+        <div class="home-content">
+            <h2>Full Website</h2>
+            <p>Foods the<br>Most precious thing</p>
+            <a href="#">Today's Menu</a>
+        </div>
+        <picture class="home-image">
+            <img src="storage/img/home.png" alt="home-image">
+        </picture>
+    </section>
+    <script>
+        
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+</script>
 </body>
 </html>
