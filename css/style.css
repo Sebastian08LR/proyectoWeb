@@ -302,6 +302,34 @@ body{
     font-weight: 400;
 }
 /* #endregion services module */
+/* #region footer module */
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15svh;
+}
+.footer-box{
+    padding: 5vw 0;
+    width: 85vw;
+    text-align: center;
+    background-color: var(--background-image-color);
+    border: 5px groove var(--text-color);
+}
+
+.footer-box > h2{
+    font-weight: 400;
+    font-size: 3.5vw;
+    margin-bottom: 3svh;
+}
+
+.footer-box > a{
+    padding: 1svh 2svh;
+    border-radius: 0.2em;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+/* #endregion footer module */
 
 @media (max-width: 1100px) {
 /* #region header and home responsive module */
@@ -320,8 +348,8 @@ body{
     width: 30px;
     height: 30px;
     cursor: pointer;
-    background: url(/storage/img/menu.png);
-    background-size: 25px;
+    background: url(/storage/img/menu.svg);
+    background-size: 28px;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 11;
@@ -330,8 +358,8 @@ body{
 .toggle.active{
     position: fixed;
     right: 20px;
-    background: url(/storage/img/close.png);
-    background-size: 25px;
+    background: url(/storage/img/close.svg);
+    background-size: 28px;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -470,5 +498,17 @@ body{
     font-size: 6vw;
 }
 /* #endregion services responsive module */
+/* #region footer responsive module */
+.footer-box{
+    height: auto;
+}
+
+.footer-box > a{
+    font-size: 3.5vw;
+}
+.footer-box > h2{
+    font-size: 4.5vw;
+}
+/* #endregion footer responsive module */
 
 }
