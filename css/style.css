@@ -104,7 +104,68 @@ body{
     height: 50svh;
 }
 /* #endregion home module */
+/* #region about-us module */
+.about-us-view{
+    display: grid;
+    width: 100%;
+    height: auto;
+    margin-bottom: 27svh;
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: 
+    " image content";
+}
 
+.about-us-content{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding-left: 3svh;
+    grid-area: content;
+    justify-content: center;
+    gap: 2svh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-us-content > h3{
+    color: var(--primary-color);
+    font-weight: 400;
+}
+.about-us-content > h2{
+    color: var(--text-color);
+    font-size: 3.5vw;
+    font-weight: 600;
+}
+
+.about-us-content > p{
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.2vw;
+    letter-spacing: 0.1em;
+}
+
+.about-us-content > a{
+    text-align: center;
+    width: 13vw;
+    max-width: 184px;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.7em;
+    border-radius: 0.2em;
+    background-color: var(--primary-color);
+}
+
+.about-us-image{ 
+    padding-left: 20vw;
+    padding-right: 2svh;
+    display: flex;
+    grid-area: image;
+}
+.about-us-image img{
+    width: 50svh;
+    height: 50svh;
+}
+/* #endregion about-us module */
 
 
 @media (max-width: 1100px) {
@@ -188,4 +249,42 @@ body{
     max-height: 70vw;
 }
 /* #endregion header and home responsive module*/
+/* #region abour-us responsive module */
+.about-us-view{
+    margin-bottom: 10svh;
+}
+.about-us-content{
+    padding-left: 0;
+    row-gap: 2em;
+    margin-bottom: 3em;
+    text-align: center;
+}
+.about-us-content > h2{
+     font-size: 8.5vw;
+ }
+.about-us-content > p{
+    font-size: 3.5vw;
+}
+
+.about-us-content > a{
+    font-size: 3vw;
+    align-self: center;
+    width: 35%;
+ }
+.about-us-view{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+    "content"
+    "image";
+ }
+.about-us-image{ 
+    padding: 0;
+    justify-content: center;
+ }
+.about-us-image img{
+    max-width: 70vw;
+    max-height: 70vw;
+}
+/* #endregion abour-us responsive module */
 }
