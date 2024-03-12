@@ -242,7 +242,66 @@ body{
     max-width: 200px;
     max-height: 200px;  
 }
+/* #region services module */
+.services{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30svh;
+   
+}
 
+.services > h3{
+    align-self: center;
+    padding-bottom: 0.2svh;
+    color: var(--primary-color);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+} 
+
+.services > h2{
+    align-self: center;
+    color: var(--text-color);
+    margin-bottom: 6svh;
+    font-size: 3em;
+    text-align: center;
+    font-weight: 500;
+}
+.images-services{
+    align-self: center;
+    display: flex;
+    column-gap: 2.5vw;
+    flex-wrap: wrap;
+}
+
+.images-services > div{
+    width: 350px;
+    height: auto;
+    padding-bottom: 2vw;
+    text-align: center;
+    border-radius: 0.2vw;
+}
+
+.services-card{
+    height: auto;
+    word-spacing: 0.1vw;
+    letter-spacing: 0.1vw;
+}
+
+.services-card > h3{
+    font-size: 20px;
+    padding-bottom: 2svh;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.services-card > p{
+    color: var(--text-color);
+    padding-bottom: 0.5vw;
+    font-weight: 400;
+}
+/* #endregion services module */
 
 @media (max-width: 1100px) {
 /* #region header and home responsive module */
@@ -393,5 +452,23 @@ body{
     height: 50vw;
 }
 /* #endregion menu responsive module */
+/* #region services responsive module */
+.images-services{
+    justify-content: center;
+    row-gap: 4svh;
+}
+.services-card{
+    text-align: center;
+    max-width: 75vw;
+    height: auto;
+}
+.services > h2{
+    font-size: 8.5vw;
+}
+
+.services-card > h3{
+    font-size: 6vw;
+}
+/* #endregion services responsive module */
 
 }
