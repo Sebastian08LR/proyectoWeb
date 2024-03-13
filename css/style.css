@@ -4,4 +4,49 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: auto;
+    display: flex;
+    padding: 2svh 2vw;
+    height: 100svh;
+    background-color: var(--text-color);
+    column-gap: 1vw;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background-color: var(--aside-background-color);
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2em;
+}
+
+.nav > li{
+    list-style: none;
+    padding: 1.2em 0;
+}
+
+aside > h1{
+    color: var(--text-color);
+}
+main{
+    width: 80%;
+    background-color: var(--gallery-background-color);
+    border-radius: 2em;
+    overflow-y: scroll;
+}
+
+main section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+}
+
+main section article img{
+    width: 100%;
 }
