@@ -409,6 +409,10 @@ body{
 .main-nav .navigation{
     display: none;
 }
+@keyframes fadeIn {
+    from { right: -50em; }
+    to { right: 0; }
+  }
 .toggle{
     position: relative;
     width: 30px;
@@ -421,8 +425,9 @@ body{
     z-index: 11;
 }
 
+
 .toggle.active{
-    position: fixed;
+    position: absolute;
     right: 20px;
     background: url(../storage/img/close.svg);
     background-size: 28px;
@@ -432,9 +437,10 @@ body{
 
 .navigation.active
 {
-    position: fixed;
+    position: absolute;
+    animation: fadeIn 0.6s ease;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: auto;
     display: flex;
@@ -448,6 +454,7 @@ body{
     background: var(--background-mobile-menu);
     z-index: 10;
 }
+
 
 .home-content{
     padding-left: 0;
@@ -566,14 +573,19 @@ body{
 /* #endregion services responsive module */
 /* #region footer responsive module */
 .footer-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: auto;
+    padding: 3em 0;
 }
 
 .footer-box > a{
     font-size: 3.5vw;
 }
 .footer-box > h2{
-    font-size: 4.5vw;
+    font-size: 5.8vw;
 }
 /* #endregion footer responsive module */
 /* #region bottom-nav responsive module */
