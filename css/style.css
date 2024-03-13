@@ -414,7 +414,7 @@ body{
     width: 30px;
     height: 30px;
     cursor: pointer;
-    background: url(/storage/img/menu.svg);
+    background: url(../storage/img/menu.svg);
     background-size: 28px;
     background-position: center;
     background-repeat: no-repeat;
@@ -424,7 +424,7 @@ body{
 .toggle.active{
     position: fixed;
     right: 20px;
-    background: url(/storage/img/close.svg);
+    background: url(../storage/img/close.svg);
     background-size: 28px;
     background-position: center;
     background-repeat: no-repeat;
