@@ -15,7 +15,7 @@ body{
     display: flex;
     padding: 2svh 2vw;
     height: 100svh;
-    background-color: var(--text-color);
+    background-color: #000;
     column-gap: 1vw;
 }
 
@@ -77,12 +77,17 @@ aside ul{
     border-bottom: 2px solid var(--buttom-color);
 }
 
+.choose{
+    transition: 0.5s ease;
+    border-bottom: 2px solid var(--buttom-color);
+}
+
 aside > h1{
     color: var(--text-color);
 }
 
 main{
-    box-shadow: 0px 4px 25px -7px rgba(255,255,255,0.86); ;
+    box-shadow: 5px 8px 17px -7px rgba(255,255,255,0.86); ;
     width: 80%;
     background-color: var(--gallery-background-color);
     border-radius: 2em;
@@ -111,17 +116,19 @@ main section::-webkit-scrollbar-thumb{
 
 main h2{
     padding-bottom: 1svh;
+    color: var(--text-color);
 }
 main section article{
     background-color: var(--cards-background-color);
-    border-radius: 2em;  
+    border-radius: 2vw;  
 }
 
 
 main section article img{
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
-    height: 550px;
+    height: 500px;
+    object-fit: contain;
     width: 100%;
 }
 
@@ -130,12 +137,13 @@ main section article div{
     height: auto;
     flex-direction: column;
     background-color: var(--banner-card-color);
-    border-bottom-left-radius: 2em;
-    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
     padding-top: 1svh;
     row-gap: 1svh;
     padding-left: 1.5vw;
 }
+
 
 main section article div a{
     text-decoration: none;
@@ -144,7 +152,7 @@ main section article div a{
     padding: 0.5em 1.5em;
     border-radius: 2em;
     color: var(--cards-background-color);
-    background-color: var(--text-color);
+    background-color: #000;
     align-self: flex-end;
 }
 
@@ -166,16 +174,6 @@ main section article div a{
     background-color: transparent;
 }
 
-#first-item{
-    grid-area: 1 / 1 / span 2 / span 7;
-    display: flex;
-}
-
-.shopping-cart-view > article > img{
-    padding-left: 1vw;
-    border-radius: 2em;
-}
-
 .shopping-cart-view > article > div{
     position: relative;
     background-color: var(--cards-background-color);
@@ -184,7 +182,18 @@ main section article div a{
     width: 100%;
 }
 
-.shopping-cart-view > article > div > a{
+#first-item{
+    grid-area: 1 / 1 / span 2 / span 7;
+    display: flex;
+    position: relative;
+}
+
+.shopping-cart-view > article > img{
+    padding-left: 1vw;
+    border-radius: 2em;
+}
+
+#cart-icon{
     position: absolute;
     object-fit: contain;
     top: 1svh;
@@ -193,7 +202,7 @@ main section article div a{
     max-height: 25px;
 }
 
-.shopping-cart-view > article > div > a > img{
+#cart-icon > img{
     width: 100%;
     height: 100%;
 }
@@ -201,16 +210,17 @@ main section article div a{
 #second-item{
     grid-area: 3 / 1 / span 2 / span 7;
     display: flex;
+    position: relative;
 }
 
 #third-item{
     grid-area: 5 / 1 / span 2 / span 7;
     display: flex;
+    position: relative;
 }
 
 .cart-actions{
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-between;
     height: 15svh;
     text-align: center;
@@ -230,16 +240,21 @@ main section article div a{
 
 .pay{
     width: auto;
+    align-self: flex-end;
     display: flex;
-    position: relative;
-    flex-direction: column;
+    height: min-content;
+    padding: 3svh 2.5vw;
+    border-radius: 1em;
+    background-color: var(--aside-background-color);
     justify-content: space-between;
 }
 
 .pay > a{
+    margin-left: 1.5vw;
     margin-bottom: 1svh;
     text-decoration: none;
     width: max-content;
+    height: min-content;
     color: var(--text-color);
     background-color: var(--cards-background-color);
     padding: 1svh 1vw;
@@ -296,13 +311,11 @@ main section article div a{
         display: flex;
         flex-direction: column;
         text-align: center;
-        height: 80svh; 
+        height: 77svh; 
         min-width: 90vw;
     }
 
     main section{
-        border-bottom-left-radius: 2em;
-        border-bottom-right-radius: 2em;
         overflow-x: hidden;
         padding: 0;
         height: 97%;
@@ -317,6 +330,26 @@ main section article div a{
         width: 50%;
         margin-bottom: 2svh;
     }
-
     
+    .shopping-cart-view > article{
+        flex-direction: column;
+        height: max-content;
+        align-items: center;
+    }
+    .pay{
+        padding: 1.5svh 2vw;
+    }
+    .pay h3{
+        font-size: 3.5vw;
+    }
+    .pay a{
+        align-self: center;
+        margin: 0;
+        margin-left: 1vw;
+        padding: 0.5svh 0.5vw;
+    }
+    #cart-icon{
+        top: 1.5svh;
+        right: 3vw;
+    }
 }
