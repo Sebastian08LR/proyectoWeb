@@ -114,7 +114,7 @@ main section::-webkit-scrollbar-thumb{
 }
 
 
-main h2{
+main > h2{
     padding-bottom: 1svh;
     color: var(--text-color);
 }
@@ -177,6 +177,8 @@ main section article div a{
 .shopping-cart-view > article > div{
     position: relative;
     background-color: var(--cards-background-color);
+    color: var(--aside-background-color);
+    font-size: 15px;
     justify-content: center;
     border-radius: 2em;
     width: 100%;
@@ -228,7 +230,7 @@ main section article div a{
 
 .cart-actions > a{
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--aside-background-color);
     width: auto;
     height: min-content;
     border-radius: 1em;
@@ -255,7 +257,7 @@ main section article div a{
     text-decoration: none;
     width: max-content;
     height: min-content;
-    color: var(--text-color);
+    color: var(--aside-background-color);
     background-color: var(--cards-background-color);
     padding: 1svh 1vw;
     border-radius: 1em;
